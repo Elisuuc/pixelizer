@@ -42,7 +42,6 @@ function generateColors(){
                 colors.className='color';
                 colors.style.backgroundColor='#'+R[i]+G[j]+B[k];
                 color.appendChild(colors);
-                console.log(R[i]+G[j]+B[k]);
             }
         }
     }

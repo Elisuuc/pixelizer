@@ -86,6 +86,8 @@ function pointer(){
         if(event.deltaY>0){
             size=size*2;
         }
+        positionsX['new']=0;
+        positionsY['new']=0;
     });
 
     document.addEventListener('keydown',event=>{
@@ -130,6 +132,21 @@ function pointer(){
                         console.log(1);
                     });
                 }
+            break;
+            case 's':
+                let filename=prompt("Filename");
+                let c=canvasDraw.toDataURL('image/png');
+                let a=document.createElement("a");
+
+                a.download=filename===''?'FILENAME.png':filename+'.png';
+                a.href=c;
+                a.id="save";
+                console.log(c);
+                console.log(a);
+                console.log(a.download);
+                document.body.appendChild(a);
+                document.getElementById('save').click();
+                document.getElementById('save').remove();
             break;
         }
     });
