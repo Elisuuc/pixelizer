@@ -154,6 +154,9 @@ function pointer(){
                     options.style='display:none;';
                 });
             break;
+            case 'c':
+                ctxD.clearRect(0,0,screen.width,screen.height);
+            break;
         }
     });
     
