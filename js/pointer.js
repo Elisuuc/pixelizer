@@ -90,6 +90,7 @@ function pointer(){
         positionsY['new']=0;
     });
 
+    
     document.addEventListener('keydown',event=>{
         switch(event.key){
             case 'm':
@@ -141,12 +142,17 @@ function pointer(){
                 a.download=filename===''?'FILENAME.png':filename+'.png';
                 a.href=c;
                 a.id="save";
-                console.log(c);
-                console.log(a);
-                console.log(a.download);
                 document.body.appendChild(a);
                 document.getElementById('save').click();
                 document.getElementById('save').remove();
+            break;
+            case 'o':
+                let options=document.getElementById('options');
+                options.style='display:block;';
+                document.addEventListener('keyup',()=>{
+                    let options=document.getElementById('options');
+                    options.style='display:none;';
+                });
             break;
         }
     });
