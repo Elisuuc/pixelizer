@@ -2,7 +2,46 @@ body{
     padding: 0;
     margin:0;
     position: fixed;
+    font-family: 'Akronim', cursive;
 }
+
+#carga{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: lightgray;
+    z-index: 10000;
+    color: white;
+}
+
+@keyframes cargado{
+    from {
+        background: lightgray;
+    }
+    to{
+        background: transparent;
+    }
+}
+
+#icon{
+    text-align: center;
+    margin-top: 20%; 
+    animation: carga 1s linear infinite forwards;
+}
+
+@keyframes carga{
+    0%{
+        transform: scale(0.1);
+    }
+    50%{
+        transform: scale(4);
+    }
+    100%{
+        transform: scale(0.1);
+    }
+}
+
+
 
 /*#title,#color{
     margin: auto;
@@ -11,9 +50,9 @@ body{
 #op{
     position: fixed;
     color: rgba(0, 0, 0, 0.2);
-    font-family: fantasy;
     top:100px;
     left: 37%;
+    font-size: 35px;
 }
 
 #options{
@@ -23,8 +62,7 @@ body{
     z-index: 50000;
     color: white;
     text-align: justify;
-    font-family: fantasy;
-    font-size: 30px;
+    font-size: 35px;
     padding-top: 100px;
     padding-left: 15%; 
     list-style: none;
@@ -59,7 +97,6 @@ body{
     font-size: 250px;
     color: rgba(0, 0, 0, 0.1);
     font-weight: 100;
-    font-family: fantasy;
 }
 
 #color{

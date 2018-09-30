@@ -23,3 +23,13 @@ window.addEventListener('DOMContentLoaded',()=>{
         body.appendChild(script);
     },1000);
 });
+
+window.addEventListener('load',()=>{
+    setTimeout(()=>{
+        document.getElementById('carga').style='animation: cargado 1s linear  1 forwards;';
+        document.getElementById('icon').remove();
+        setTimeout(()=>{
+            document.getElementById('carga').remove();
+        },1000);
+    },3000);
+});

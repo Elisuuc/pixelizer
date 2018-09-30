@@ -15,7 +15,7 @@ function pointer(){
     //mirror
     let positionsXM=[];
     let positionsYM=[];
-    let size=5;
+    let size=20;
     let positionsD=[];
 
     ctxP.fillRect(positionsX['last'],positionsY['last'],size,size);
@@ -79,7 +79,9 @@ function pointer(){
         canvasPointer.removeEventListener('mousemove',erase);
         canvasPointer.removeEventListener('mousemove',dublicateMode);
     });
-    canvasPointer.addEventListener('wheel',event=>{
+
+    //other feature maybe next time
+    /*canvasPointer.addEventListener('wheel',event=>{
         if(event.deltaY<0){
             size=size/2;
         }    
@@ -88,7 +90,7 @@ function pointer(){
         }
         positionsX['new']=0;
         positionsY['new']=0;
-    });
+    });*/
 
     
     document.addEventListener('keydown',event=>{
