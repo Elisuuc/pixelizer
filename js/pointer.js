@@ -18,7 +18,7 @@ function pointer(){
     let size=20;
     let positionsD=[];
 
-    ctxP.fillRect(positionsX['last'],positionsY['last'],size,size);
+    ctxP.strokeRect(positionsX['last'],positionsY['last'],size,size);
 
     canvasPointer.addEventListener('mousemove',evt=>{
         let x=evt.offsetX;
